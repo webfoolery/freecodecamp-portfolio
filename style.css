@@ -1,0 +1,120 @@
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+}
+
+@keyframes iconFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.centeredContent {
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
+.navbar {margin-bottom: 1px;}
+
+.container-fluid#hero {
+    margin: 0 auto 20px auto;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    background: #000;
+    overflow: hidden;
+}
+
+.container-fluid#iconStrip {padding-top:80px;padding-bottom:80px;}
+.container-fluid#about {padding-top:80px;padding-bottom:40px;background:#222;color:white;}
+.container-fluid#portfolio {padding-bottom:80px 0;background:#222;}
+.container-fluid#contact {padding-top:80px;padding-bottom:80px;}
+
+#hero .centeredContent {
+    text-shadow: 1px 1px 2px #000;
+    color:white;
+}
+
+.heroImage {
+    width: 100%;
+    height: 0;
+    padding-bottom: 33%;
+    background: url("images/internet-2.jpg") transparent no-repeat center center;
+    background-size:cover;
+    opacity:0;
+    animation: heroFadeIn 6s 0s forwards ease-in-out;
+}
+
+.iconStrip span {
+    transform: scale(1.8);
+    animation: iconFadeIn 2s 0s forwards ease-in-out;
+}
+
+.singlePortfolio {
+    position:relative;
+    background:#000;
+}
+
+.portfolioImage {
+    width: 100%;
+    height: 0;
+    padding-bottom: 46%;
+    background: url("//via.placeholder.com/800x400") transparent no-repeat top center;
+    background-size:cover;
+    overflow:hidden;
+    transition: all 400ms ease-in-out;
+    opacity:0.8;
+}
+
+.portfolioImage.mpi {background-image:url("images/portfolio-mpi.jpg");}
+.portfolioImage.aspire {background-image:url("images/portfolio-aspire.jpg");}
+.portfolioImage.mympi {background-image:url("images/portfolio-mympi.jpg");}
+.portfolioImage.animark {background-image:url("images/portfolio-animark.jpg");}
+.portfolioImage.theglouc {background-image:url("images/portfolio-theglouc.jpg");}
+.portfolioImage.essential {background-image:url("images/portfolio-essential.jpg");}
+.portfolioImage.madhatters {background-image:url("images/portfolio-madhatters.jpg");}
+
+.portfolioLink {}
+.portfolioLink:hover .portfolioImage {
+    opacity:0.2;
+}
+
+.portfolioLink .centeredContent {
+    color: #fff;
+    opacity:1;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.portfolioLink:hover .centeredContent {
+    opacity:1;
+}
+
+.social li {text-align:center;}
+
+.footer {margin:30px auto;padding:50px 0;background:#222;}
+
+.footer a {color:#9d9d9d;text-decoration:none;}
+.footer a:hover {color:#ffffff;}
+
+@media (max-width: 768px) {
+    .heroImage {padding-bottom: 100%;}
+}
